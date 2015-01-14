@@ -227,7 +227,9 @@ public class OrderTest {
 
     @Test
     public void testWhenCustomerExistsAndPurchasedExistThenTimeReceivedIsNow() {
-
+     OrderTest orderQueue=new OrderTest();
+    
+     
     }
 
     @Test
