@@ -7,6 +7,7 @@
 package assignment1;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -16,9 +17,9 @@ import java.util.List;
 public class Order {
     private String customerID;
     private String customerName;
-    private String timeReceived;
-    private String ProcessingTime;
-    private String timeFulfilled;
+    private Date timeReceived;
+    private Date ProcessingTime;
+    private Date timeFulfilled;
     
     private String notes;
     private List<Purchase> listOfPurchase=new ArrayList<>();
@@ -39,15 +40,15 @@ public class Order {
         return customerName;
     }
 
-    public String getTimeReceived() {
+    public Date getTimeReceived() {
         return timeReceived;
     }
 
-    public String getProcessingTime() {
+    public Date getProcessingTime() {
         return ProcessingTime;
     }
 
-    public String getTimeFulfilled() {
+    public Date getTimeFulfilled() {
         return timeFulfilled;
     }
 
@@ -67,15 +68,15 @@ public class Order {
         this.customerName = customerName;
     }
 
-    public void setTimeReceived(String timeReceived) {
+    public void setTimeReceived(Date timeReceived) {
         this.timeReceived = timeReceived;
     }
 
-    public void setProcessingTime(String ProcessingTime) {
+    public void setProcessingTime(Date ProcessingTime) {
         this.ProcessingTime = ProcessingTime;
     }
 
-    public void setTimeFulfilled(String timeFulfilled) {
+    public void setTimeFulfilled(Date timeFulfilled) {
         this.timeFulfilled = timeFulfilled;
     }
 
