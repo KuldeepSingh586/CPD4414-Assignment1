@@ -225,5 +225,32 @@ public class OrderTest {
         instance.setListOfPurchase(listOfPurchase);
        
     }
+    @Test
+    public void testWhenCustomerExistsAndPurchasedExistThenTimeReceivedIsNow(){
+        
+    }
+    @Test
+    public void testWhenRequestToProcessOrderAndOrderNotHaveTimeReceivedThenThrowException() {
+        
+    }
+
+    @Test
+   public void testWhenRequestToFilfullOrderAndOrderHasTimeProcessedAndTimeReceivedThenSetTheFulfilledTime() {
+       
+   }
+   @Test
+   public void testWhenRequestToFulFillOrderAndOrderNotHaveTimeProcessedThenThrowException() {
+        
+   }
+  
+   @Test
+   public void testWhenRequestToFulFillOrderAndOrderNotHaveTimeReceivedThenThrowException() {
+        
+   }    
+   @Test
+   public void testWhenRequestToReportAndNoOrderInSystemThenRetuenEmptyString() {
+        
+   }
+   
     
 }
