@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package assignment1;
 
 import java.util.List;
@@ -19,22 +18,22 @@ import static org.junit.Assert.*;
  * @author c0649005
  */
 public class OrderTest {
-    
+
     public OrderTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -48,7 +47,7 @@ public class OrderTest {
         Purchase p = null;
         Order instance = null;
         instance.addPurchase(p);
-       
+
     }
 
     /**
@@ -61,7 +60,7 @@ public class OrderTest {
         String expResult = "";
         String result = instance.getCustomerID();
         assertEquals(expResult, result);
-        
+
     }
 
     /**
@@ -74,7 +73,7 @@ public class OrderTest {
         String expResult = "";
         String result = instance.getCustomerName();
         assertEquals(expResult, result);
-        
+
     }
 
     /**
@@ -87,7 +86,7 @@ public class OrderTest {
         String expResult = "";
         String result = instance.getTimeReceived();
         assertEquals(expResult, result);
-        
+
     }
 
     /**
@@ -100,7 +99,7 @@ public class OrderTest {
         String expResult = "";
         String result = instance.getProcessingTime();
         assertEquals(expResult, result);
-        
+
     }
 
     /**
@@ -113,7 +112,7 @@ public class OrderTest {
         String expResult = "";
         String result = instance.getTimeFulfilled();
         assertEquals(expResult, result);
-        
+
     }
 
     /**
@@ -126,7 +125,7 @@ public class OrderTest {
         String expResult = "";
         String result = instance.getNotes();
         assertEquals(expResult, result);
-        
+
     }
 
     /**
@@ -139,7 +138,7 @@ public class OrderTest {
         List<Purchase> expResult = null;
         List<Purchase> result = instance.getListOfPurchase();
         assertEquals(expResult, result);
-        
+
     }
 
     /**
@@ -151,7 +150,7 @@ public class OrderTest {
         String customerID = "";
         Order instance = null;
         instance.setCustomerID(customerID);
-       
+
     }
 
     /**
@@ -163,7 +162,7 @@ public class OrderTest {
         String customerName = "";
         Order instance = null;
         instance.setCustomerName(customerName);
-       
+
     }
 
     /**
@@ -175,7 +174,7 @@ public class OrderTest {
         String timeReceived = "";
         Order instance = null;
         instance.setTimeReceived(timeReceived);
-       
+
     }
 
     /**
@@ -187,7 +186,7 @@ public class OrderTest {
         String ProcessingTime = "";
         Order instance = null;
         instance.setProcessingTime(ProcessingTime);
-      
+
     }
 
     /**
@@ -211,7 +210,7 @@ public class OrderTest {
         String notes = "";
         Order instance = null;
         instance.setNotes(notes);
-    
+
     }
 
     /**
@@ -223,34 +222,37 @@ public class OrderTest {
         List<Purchase> listOfPurchase = null;
         Order instance = null;
         instance.setListOfPurchase(listOfPurchase);
-       
-    }
-    @Test
-    public void testWhenCustomerExistsAndPurchasedExistThenTimeReceivedIsNow(){
-        
-    }
-    @Test
-    public void testWhenRequestToProcessOrderAndOrderNotHaveTimeReceivedThenThrowException() {
-        
+
     }
 
     @Test
-   public void testWhenRequestToFilfullOrderAndOrderHasTimeProcessedAndTimeReceivedThenSetTheFulfilledTime() {
-       
-   }
-   @Test
-   public void testWhenRequestToFulFillOrderAndOrderNotHaveTimeProcessedThenThrowException() {
-        
-   }
-  
-   @Test
-   public void testWhenRequestToFulFillOrderAndOrderNotHaveTimeReceivedThenThrowException() {
-        
-   }    
-   @Test
-   public void testWhenRequestToReportAndNoOrderInSystemThenRetuenEmptyString() {
-        
-   }
-   
-    
+    public void testWhenCustomerExistsAndPurchasedExistThenTimeReceivedIsNow() {
+
+    }
+
+    @Test
+    public void testWhenRequestToProcessOrderAndOrderNotHaveTimeReceivedThenThrowException() {
+
+    }
+
+    @Test
+    public void testWhenRequestToFilfullOrderAndOrderHasTimeProcessedAndTimeReceivedThenSetTheFulfilledTime() {
+
+    }
+
+    @Test
+    public void testWhenRequestToFulFillOrderAndOrderNotHaveTimeProcessedThenThrowException() {
+
+    }
+
+    @Test
+    public void testWhenRequestToFulFillOrderAndOrderNotHaveTimeReceivedThenThrowException() {
+
+    }
+
+    @Test
+    public void testWhenRequestToReportAndNoOrderInSystemThenRetuenEmptyString() {
+
+    }
+
 }
