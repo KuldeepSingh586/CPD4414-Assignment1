@@ -228,7 +228,7 @@ public class OrderTest {
 
     @Test
     public void testWhenRequestToProcessOrderAndOrderNotHaveTimeReceivedThenThrowException() {
-
+      
     }
 
     @Test
@@ -253,7 +253,15 @@ public class OrderTest {
 
     @Test
     public void testWhenCustomerExistAndPurchasedExistThenTimeReceivedIsNow() {
-
+        OrderQueue orderQueue = new OrderQueue();
+        Order order = new Order("CUST00001", "ABC Construction");
+        order.addPurchase(new Purchase("PROD0004", 450));
+        order.addPurchase(new Purchase("PROD0006", 250));
+        orderQueue.add(order);
+        
+        long expResult = new Date().getTime();
+        long result = order.getTimeReceived().getTime();
+        assertTrue(Math.abs(result - expResult) < 1000);
     }
 
     @Test
