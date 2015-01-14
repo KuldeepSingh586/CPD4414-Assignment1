@@ -13,8 +13,13 @@ package assignment1;
 class Purchase {
     
     private String productID;
-    private String quantity;
+    private int quantity;
 
+     public Purchase(String productId, int quantity) {
+        this.productID = productId;
+        this.quantity = quantity;
+    }
+     
     public String getProductID() {
         return productID;
     }
@@ -23,11 +28,11 @@ class Purchase {
         this.productID = productID;
     }
 
-    public String getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(String quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
     

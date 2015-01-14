@@ -5,6 +5,7 @@
  */
 package assignment1;
 
+import java.util.Date;
 import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -227,7 +228,17 @@ public class OrderTest {
 
     @Test
     public void testWhenCustomerExistsAndPurchasedExistThenTimeReceivedIsNow() {
-
+       OrderQueue orderQueue = new OrderQueue();
+        Order order = new Order("CUST00001", "ABC Construction");
+        order.addPurchase(new Purchase("PROD0004", 450));
+        order.addPurchase(new Purchase("PROD0006", 250));
+        orderQueue.add(order);
+        
+        long expResult = new Date().getTime();
+        long result = order.getTimeReceived().getTime();
+        assertTrue(Math.abs(result - expResult) < 1000);
+    
+     
     }
 
     @Test
