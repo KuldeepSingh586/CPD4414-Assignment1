@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author c0649005
+ * @author c0648442
  */
 public class OrderTest {
 
@@ -84,8 +84,8 @@ public class OrderTest {
     public void testGetTimeReceived() {
         System.out.println("getTimeReceived");
         Order instance = null;
-        String expResult = "";
-        String result = instance.getTimeReceived();
+        Date expResult = null;
+        Date result = instance.getTimeReceived();
         assertEquals(expResult, result);
 
     }
@@ -97,8 +97,8 @@ public class OrderTest {
     public void testGetProcessingTime() {
         System.out.println("getProcessingTime");
         Order instance = null;
-        String expResult = "";
-        String result = instance.getProcessingTime();
+        Date expResult = null;
+        Date result = instance.getProcessingTime();
         assertEquals(expResult, result);
 
     }
@@ -110,8 +110,8 @@ public class OrderTest {
     public void testGetTimeFulfilled() {
         System.out.println("getTimeFulfilled");
         Order instance = null;
-        String expResult = "";
-        String result = instance.getTimeFulfilled();
+        Date expResult = null;
+        Date result = instance.getTimeFulfilled();
         assertEquals(expResult, result);
 
     }
@@ -172,7 +172,7 @@ public class OrderTest {
     @Test
     public void testSetTimeReceived() {
         System.out.println("setTimeReceived");
-        String timeReceived = "";
+        Date timeReceived = null;
         Order instance = null;
         instance.setTimeReceived(timeReceived);
 
@@ -184,7 +184,7 @@ public class OrderTest {
     @Test
     public void testSetProcessingTime() {
         System.out.println("setProcessingTime");
-        String ProcessingTime = "";
+        Date ProcessingTime = null;
         Order instance = null;
         instance.setProcessingTime(ProcessingTime);
 
@@ -196,7 +196,7 @@ public class OrderTest {
     @Test
     public void testSetTimeFulfilled() {
         System.out.println("setTimeFulfilled");
-        String timeFulfilled = "";
+        Date timeFulfilled = null;
         Order instance = null;
         instance.setTimeFulfilled(timeFulfilled);
 
@@ -224,21 +224,6 @@ public class OrderTest {
         Order instance = null;
         instance.setListOfPurchase(listOfPurchase);
 
-    }
-
-    @Test
-    public void testWhenCustomerExistsAndPurchasedExistThenTimeReceivedIsNow() {
-       OrderQueue orderQueue = new OrderQueue();
-        Order order = new Order("CUST00001", "ABC Construction");
-        order.addPurchase(new Purchase("PROD0004", 450));
-        order.addPurchase(new Purchase("PROD0006", 250));
-        orderQueue.add(order);
-        
-        long expResult = new Date().getTime();
-        long result = order.getTimeReceived().getTime();
-        assertTrue(Math.abs(result - expResult) < 1000);
-    
-     
     }
 
     @Test
@@ -274,7 +259,6 @@ public class OrderTest {
     @Test
     public void testCustomerIDAndCustomerNameDoesNotExistThrowException() {
 
-        
     }
 
     @Test
@@ -294,4 +278,5 @@ public class OrderTest {
     @Test
     public void testWhenTheOrderHaveTimeRecivedTimeSetProcessedToNow() {
     }
+
 }
