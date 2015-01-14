@@ -257,4 +257,31 @@ public class OrderTest {
 
     }
 
+    @Test
+    public void testWhenCustomerExistAndPurchasedExistThenTimeReceivedIsNow() {
+
+    }
+
+    @Test
+    public void testCustomerIDAndCustomerNameDoesNotExistThrowException() {
+
+    }
+
+    @Test
+    public void testthereIsNoListOfPurchaseThrowException() {
+    }
+
+    @Test
+    public void testWhenRequestForNextOrderReturnTheOrderWithEarliestTimeRecived() {
+
+    }
+
+    @Test
+    public void testWhenRequestForNextOrderAndThereIsNoOrderInSystemReturnnull() {
+
+    }
+
+    @Test
+    public void testWhenTheOrderHaveTimeRecivedTimeSetProcessedToNow() {
+    }
 }
